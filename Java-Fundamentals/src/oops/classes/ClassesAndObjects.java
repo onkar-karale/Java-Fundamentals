@@ -3,17 +3,22 @@ package oops.classes;
 // =====================================================================
 // TOPIC 1: JAVA CLASSES & OBJECTS
 // - Java is an object-oriented programming language.
-// - Everything in Java is associated with classes and objects, along
-//   with attributes (data) and methods (behavior).
-// - Real-life analogy: A Car is an object. Attributes = weight, color;
-//   Methods = drive(), brake().
+// - Everything in Java is associated with classes and objects, along with attributes (data) and methods (behavior).
+// - Real-life analogy: A Car is an object. Attributes = weight, color; Methods = drive(), brake().
 // - A Class is a "blueprint" used to create objects.
 // - An Object is an instance created from a class using the 'new' keyword.
 // =====================================================================
 
+class Calculator {
+    public int add(int n1, int n2){
+        int r = n1 + n2;
+        return r;
+    }
+}
+
 public class ClassesAndObjects {
 
-    // Blueprint class (representing a simple object with one attribute)
+    // Static nested class: independent of the outer class object
     static class Box {
         int x = 5;
     }
@@ -30,6 +35,13 @@ public class ClassesAndObjects {
         // Using multiple classes: in real projects, you can also put
         // 'Box' in its own file (Box.java) in the same package and call
         // 'new Box()' from here without needing any import.
+
+        int num1 = 5;
+        int num2 = 4;
+
+        Calculator calc = new Calculator();
+        int result = calc.add(num1, num2);
+        IO.println("The addition of above two numbers are: " + result);
     }
 }
 

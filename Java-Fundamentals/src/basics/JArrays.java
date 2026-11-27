@@ -81,7 +81,35 @@ public class JArrays {
 
         IO.println("");
 
-        // 5. MULTIDIMENSIONAL ARRAYS (2D Array = Rows & Columns)
+        // 5. Array of Objects:
+
+        class Student {
+            int id;
+            String name;
+            int age;
+
+            Student(int id, String name, int age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+
+            void display() {
+                System.out.println(id + " " + name + " " + age);
+            }
+        }
+
+        Student[] students = new Student[3];
+
+        students[0] = new Student(1, "Rahul", 21);
+        students[1] = new Student(2, "Amit", 22);
+        students[2] = new Student(3, "Priya", 20);
+
+        for (int i = 0; i < students.length; i++) {
+            students[i].display();
+        }
+
+        // 6. MULTIDIMENSIONAL ARRAYS (2D Array = Rows & Columns)
         // Row 0: {1, 2, 3, 4}
         // Row 1: {5, 6, 7}     (Java allows jagged rows with different lengths!)
         int[][] matrix = {
@@ -116,7 +144,7 @@ public class JArrays {
 
         IO.println("");
 
-        // 6. ESSENTIAL java.util.Arrays UTILITY METHODS
+        // 7. ESSENTIAL java.util.Arrays UTILITY METHODS
         // Printing an array directly (IO.println(ages)) prints an ugly memory hash like [I@5f184fc6!
         // Always use Arrays.toString() for 1D arrays and Arrays.deepToString() for 2D arrays.
         int[] unsorted = {42, 7, 19, 100, 3};

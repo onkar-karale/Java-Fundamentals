@@ -32,6 +32,11 @@ public class Strings {
         IO.println("String: " + greeting);
         IO.println("Length: " + greeting.length());
 
+        // 2nd method for creating the strings
+        String name = new String("Onkar");
+        IO.println(name);
+        IO.println(name.length());
+
         IO.println("");
 
         // 2. COMMON STRING METHODS (Original string stays unchanged!)
@@ -47,6 +52,8 @@ public class Strings {
         IO.println("replace()      : " + sample.trim().replace("Backend", "API"));
         IO.println("isBlank()      : " + "   ".isBlank());            // true (whitespace counts as blank)
         IO.println("isEmpty()      : " + "   ".isEmpty());            // false (length is 3)
+
+        IO.println("");
 
         // Splitting a String into a String[] array (just like JS .split(","))
         String csvRoles = "ADMIN,USER,AUDITOR";

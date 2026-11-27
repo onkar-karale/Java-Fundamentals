@@ -13,8 +13,8 @@ package oops.fourpillars;
 //   - Flexible: change internal implementation without breaking callers.
 //   - Increased security of data.
 // =====================================================================
-public class Encapsulation {
 
+public class Encapsulation {
     static class Account {
         private String ownerName; // Hidden from direct external access
         private double balance;
@@ -45,6 +45,27 @@ public class Encapsulation {
         }
     }
 
+    static class Human{
+        private int age;
+        private String name;
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int a) {
+            age = a;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String n) {
+            name = n;
+        }
+    }
+
     void main() {
         Account acc = new Account();
         // acc.ownerName = "John"; // Compilation error: ownerName has private access
@@ -55,6 +76,12 @@ public class Encapsulation {
 
         IO.println("Owner: " + acc.getOwnerName());
         IO.println("Balance: " + acc.getBalance());
+
+        Human obj = new Human();
+        obj.setAge(28);
+        obj.setName("Onkar");
+
+        IO.print("Name is: " + obj.getName() + " & age is " + obj.getAge());
     }
 }
 
